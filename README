@@ -1,0 +1,116 @@
+# 📈 Stock Price Predictor App
+
+A simple web application built using **Streamlit** and a trained **Keras model** to predict the future stock prices of any public company using historical stock data.
+
+---
+
+## 🔍 Overview
+
+This application allows users to:
+
+* Enter a stock ticker symbol (e.g., `GOOG`, `AAPL`, `TSLA`)
+* Download historical data using **Yahoo Finance**
+* Visualize:
+
+  * Original stock prices
+  * Moving Averages (100, 200, and 250 days)
+* Use a pre-trained deep learning model to predict future prices based on historical trends
+* Compare predicted prices with actual prices from the test dataset
+
+---
+
+## 🛠️ Features
+
+* 📦 Loads data from **Yahoo Finance**
+* 📊 Plots moving averages to visualize trends
+* 🤖 Uses a pre-trained **Keras** model for price prediction
+* 📈 Shows prediction results vs actual close prices
+* 🖥️ Fully interactive with **Streamlit**
+
+---
+
+## 📁 File Structure
+
+```
+.
+├── app.py                         # Main Streamlit application
+├── Latest_stock_price_model.keras # Pre-trained Keras model (not included in repo)
+└── README.md                      # Project documentation
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/stock-price-predictor.git
+cd stock-price-predictor
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the app
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🧪 Requirements
+
+* `streamlit`
+* `pandas`
+* `numpy`
+* `keras`
+* `matplotlib`
+* `yfinance`
+* `scikit-learn`
+
+You can create a `requirements.txt` like:
+
+```txt
+streamlit
+pandas
+numpy
+keras
+matplotlib
+yfinance
+scikit-learn
+```
+
+---
+
+## 📷 Screenshots
+
+| Feature                      | Screenshot                                                                   |
+| ---------------------------- | ---------------------------------------------------------------------------- |
+| Moving Average Visualization | ![MA Chart](https://via.placeholder.com/600x300.png?text=MA+Chart)           |
+| Prediction vs Actual         | ![Prediction](https://via.placeholder.com/600x300.png?text=Prediction+Graph) |
+
+---
+
+## 📌 Notes
+
+* This app uses a **deep learning model trained externally**. Make sure to place your `.keras` model file (`Latest_stock_price_model.keras`) in the same directory.
+* The model expects the input data to be scaled and shaped with a window of 100 past days.
+
+---
+
+## 🧠 Future Improvements
+
+* Add model training capability within the app
+* Enable long-term future predictions
+* Improve UI with themes and better interactivity
+
+---
+
+## 📜 License
+
+MIT License
